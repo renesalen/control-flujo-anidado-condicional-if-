@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>Control de flujo 4 Condicional IF</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<h1>Control de flujo 4 Condicional IF</h1>
+	<script>/*
+		var num1=prompt('Introduce el 1er n°');
+		var num2=prompt('Introduce el 2er n°');
+		var operacion=prompt('¿Qué Operacion deseas realizar?: suma/resta/multiplicación/división');
+		if(operacion=='suma'){
+			alert(parseInt(num1)+parseInt(num2));
+		}
+		else if(operacion=='resta'){
+			alert(parseInt(num1)-parseInt(num2));
+		}
+		else if(operacion=='multiplicación' || operacion=='multiplicacion'){
+			alert(parseInt(num1)*parseInt(num2));
+		}
+		else if(operacion=='división' || operacion=='division'){
+			alert(parseInt(num1)/parseInt(num2));
+		}
+		else {
+			alert('La Operacion no está contemplada');
+		}
+
+		//Qué sucede si por ejm introducimos un número en letras, e introducimos el 2do valor en numero, y cuando me pide que operacion hacer y le digo sume; nos devuelve una valor:NaN
+		var num3=prompt('Introduce el 1er n°');
+		var num4=prompt('Introduce el 2er n°');
+		//SOLUCION: Debemos utilizar una funcion predefinida de Java scrip: isNaN(). Lo que haces isNaN() es comprobar si lo que intrucimos entre () no es un numero. ejm: isNaN(7 )= falso isNaN(ocho)= verdad
+		//Aqui entra en juego los IFs anidados y tambien un nuevo operador
+		//Lo que queremos es que la linea var operacion cuando me pregunte la operacion a realizar, solamente salga en el caso que hemos introcducido en mun3 y mun4 son valores numéricos
+		//Con if(isNaN(num3) && isNaN(num4))Estamos preguntando si num3 no es numero y num4 no es un numero lo que queremos que se cumpla todo el programa. Esto es justo lo contrario de lo queremos preguntarle
+		//lo que debemos hacer es darle la vuelta ala condicion de isNaN, es decir preguntale justo lo contrario
+		//utilizamos el Operador Negado: !
+		//Eso obliga al usuario que lo que haya introducido sea un numero, en caso contrario no entrará en el Id y no hará el programa
+		if(!isNaN(num3) && !isNaN(num4)){//Esta linea anida a todas las demas
+			var operacion=prompt('¿Qué Operacion deseas realizar?: suma/resta/multiplicación/división');
+			if(operacion=='suma'){
+				alert(parseInt(num3)+parseInt(num4));
+			}
+			else if(operacion=='resta'){
+				alert(parseInt(num3)-parseInt(num4));
+			}
+			else if(operacion=='multiplicación' || operacion=='multiplicacion'){
+				alert(parseInt(num3)*parseInt(num4));
+			}
+			else if(operacion=='división' || operacion=='division'){
+				alert(parseInt(num3)/parseInt(num4));
+			}
+		}
+		else{
+			alert('No son numeros los que ha introducido.');
+		}*/
+
+		//Otro con mayores Detalles:
+		var num5=prompt('Introduce el 1er n°');
+		var num6=prompt('Introduce el 2er n°');
+		if(!isNaN(num5) && !isNaN(num6)){
+			var operacion=prompt('¿Qué Operacion deseas realizar?: suma/resta/multiplicación/división');
+			if(operacion=='suma'){
+				alert(parseInt(num5)+parseInt(num6));
+			}
+			else if(operacion=='resta'){
+				alert(parseInt(num5)-parseInt(num6));
+			}
+			else if(operacion=='multiplicación' || operacion=='multiplicacion'){
+				alert(parseInt(num5)*parseInt(num6));
+			}
+			else if(operacion=='división' || operacion=='division'){
+				alert(parseInt(num5)/parseInt(num6));
+			}
+		}
+		else{
+			//Si el tipo de dato num5 almacena es un string y el tipo de dato almancenado m6 es un string 
+			if (typeof(num5)=='string' || typeof(num6)=='string'){
+				alert('As introducido valores numericos');
+			}
+			else{
+				alert('Ha ocurrido un error');
+			}
+		}
+	</script>
+</body>
+</html>
